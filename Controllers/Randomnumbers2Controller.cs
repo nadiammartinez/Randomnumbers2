@@ -25,7 +25,7 @@ namespace RandomNumbersAPI.Controllers
                 return BadRequest("El valor de min no puede ser mayor que max.");
             }
 
-            int valor = rnd.Next(min, max); // genera entre [min, max)
+            int valor = rnd.Next(min, max); 
             return Ok(new { result = valor });
         }
 
@@ -33,7 +33,7 @@ namespace RandomNumbersAPI.Controllers
         [HttpGet("decimal")]
         public IActionResult GetDecimal()
         {
-            double valor = rnd.NextDouble(); // entre 0 y 1
+            double valor = rnd.NextDouble(); 
             return Ok(new { result = valor });
         }
 
